@@ -7,10 +7,12 @@
   "author": "roop@artsymail.com",
   "license": "MIT",
   "dependencies": {
+    "babel-preset-env": "^1.6.0",
+    "babel-register": "^6.26.0",
     "express": "^4.15.4",
     "nodemon": "^1.11.0"
   },
   "scripts": {
-    "start" : "nodemon index.js"
+    "start": "nodemon index.js"
   }
 }
