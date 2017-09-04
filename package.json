@@ -5,5 +5,8 @@
   "main": "index.js",
   "repository": "https://github.com/anandaroop/magnetism",
   "author": "roop@artsymail.com",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.15.4"
+  }
 }
