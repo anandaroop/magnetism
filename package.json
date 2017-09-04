@@ -14,5 +14,8 @@
   },
   "scripts": {
     "start": "nodemon index.js"
+  },
+  "devDependencies": {
+    "eslint": "^4.6.1"
   }
 }
