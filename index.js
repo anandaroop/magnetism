@@ -1,9 +1,11 @@
-express = require('express')
+var express = require('express')
 
 const app = express()
 
+app.use('/artist-roster', require('./apps/artist-roster'))
+
 app.get('/', (req, res) => {
-  res.send('hello world')
+  res.redirect('/artist-roster')
 })
 
 app.listen(3000, () => {
