@@ -1,0 +1,9 @@
+{
+  "name": "magnetism",
+  "version": "0.1.0",
+  "description": "Tools for gallery and institutional partnerships",
+  "main": "index.js",
+  "repository": "https://github.com/anandaroop/magnetism",
+  "author": "roop@artsymail.com",
+  "license": "MIT"
+}
