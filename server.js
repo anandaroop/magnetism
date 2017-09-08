@@ -2,7 +2,7 @@ import express from 'express'
 
 const app = express()
 
-app.use('/artist-roster', require('./apps/artist-roster').router)
+app.use('/artist-roster', require('./apps/artist-roster').app)
 
 app.get('/', (req, res) => {
   res.redirect('/artist-roster')

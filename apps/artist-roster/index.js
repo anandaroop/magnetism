@@ -1,9 +1,11 @@
 import express from 'express'
 import metaphysics from '../../lib/metaphysics'
 
-const router = express.Router()
+const app = express()
+app.set('view engine', 'pug')
+app.set('views', `${__dirname}/views`)
 
-router.get('/', (req, res) => {
+app.get('/', (req, res) => {
   const query = `{
     match_artist(term: "Warh") {
       id,
@@ -11,6 +13,10 @@ router.get('/', (req, res) => {
     }
   }`
   metaphysics(query).then(data => res.send(data))
- })
+})
 
-export { router }
+app.get('/pug', (req, res) => {
+  res.render('index.pug', { title: 'Pug!', message: "It's working!" })
+})
+
+export { app }
