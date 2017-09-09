@@ -17,10 +17,10 @@
   "scripts": {
     "start": "node index.js",
     "start-dev": "nodemon index.js",
-    "build": "webpack",
-    "clobber": "rm -rf public/assets"
+    "build": "webpack"
   },
   "devDependencies": {
+    "clean-webpack-plugin": "^0.1.16",
     "eslint": "^4.6.1",
     "nodemon": "^1.11.0",
     "webpack": "^3.5.6"
