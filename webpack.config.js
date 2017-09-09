@@ -12,5 +12,6 @@ module.exports = {
   },
   plugins: [
     new CleanWebpackPlugin(['public/assets'])
-  ]
+  ],
+  devtool: 'inline-source-map'  
 }
