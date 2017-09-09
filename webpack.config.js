@@ -5,6 +5,11 @@ module.exports = {
   entry: {
     artistRoster: './apps/artist-roster/client.js'
   },
+  module: {
+    rules: [
+      { test: /\.js$/, exclude: /node_modules/, loader: 'babel-loader' }
+    ]
+  },
   output: {
     filename: '[name].js',
     path: path.resolve(__dirname, 'public/assets'),
@@ -13,5 +18,5 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(['public/assets'])
   ],
-  devtool: 'inline-source-map'  
+  devtool: 'inline-source-map'
 }
