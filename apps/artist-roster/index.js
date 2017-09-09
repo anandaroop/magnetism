@@ -16,7 +16,7 @@ app.get('/', (req, res) => {
 })
 
 app.get('/pug', (req, res) => {
-  res.render('index.pug', { title: 'React', message: "Hello, React?" })
+  res.render('index.pug', { title: 'React', message: 'Hello, React?' })
 })
 
 export { app }
