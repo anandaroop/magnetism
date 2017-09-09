@@ -12,15 +12,18 @@
     "dotenv": "^4.0.0",
     "express": "^4.15.4",
     "isomorphic-fetch": "^2.2.1",
-    "nodemon": "^1.11.0",
     "pug": "^2.0.0-rc.4"
   },
   "scripts": {
     "start": "node index.js",
-    "start-dev": "nodemon index.js"
+    "start-dev": "nodemon index.js",
+    "build": "webpack",
+    "clobber": "rm -rf public/assets"
   },
   "devDependencies": {
-    "eslint": "^4.6.1"
+    "eslint": "^4.6.1",
+    "nodemon": "^1.11.0",
+    "webpack": "^3.5.6"
   },
   "engines": {
     "node": "8.3.0"
