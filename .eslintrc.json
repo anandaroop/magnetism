@@ -11,5 +11,8 @@
     },
     "sourceType": "module"
   },
-  "extends": ["standard", "standard-react"]
+  "extends": ["standard", "standard-react"],
+  "rules": {
+    "space-before-function-paren": "off"
+  }
 }
