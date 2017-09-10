@@ -8,7 +8,23 @@ exports[`App renders 1`] = `
     Hi Styles
   </h1>
   <p>
-    I'm a properly linted App!
+    Do you like numbers? Great!
+     
+    <a
+      href="#"
+      onClick={[Function]}
+    >
+      Add more
+    </a>
   </p>
+  <ul
+    className="sc-bwzfXH fGIOEA"
+  >
+    <li
+      className="sc-htpNat cgsvxu"
+    >
+      0
+    </li>
+  </ul>
 </div>
 `;
