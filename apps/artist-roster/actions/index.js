@@ -1,4 +1,4 @@
-import { fetchMetaphysicsArtist } from '../helpers/fetch'
+import { fetchArtistData } from '../helpers/fetch'
 
 export const ADD_ARTIST = 'ADD_ARTIST'
 export const REMOVE_ARTIST = 'REMOVE_ARTIST'
@@ -34,7 +34,7 @@ export function receiveArtist(artistId, artist) {
 export function fetchArtist(artistId) {
   return function(dispatch) {
     dispatch(requestArtist(artistId))
-    fetchMetaphysicsArtist(artistId)
+    fetchArtistData(artistId)
       .then(
         response => {
           return response.json()

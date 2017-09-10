@@ -3,26 +3,20 @@ import Autosuggest from 'react-autosuggest'
 import styled from 'styled-components'
 import { connect } from 'react-redux'
 
-import env from '../../env.json'
 import { garamond } from '../../helpers/styles'
 import { addArtist, fetchArtist } from '../../actions'
 
 const fetchSuggestions = value => {
-  const payload = JSON.stringify({
-    query: `{match_artist(term: "${value}", size: 5) { id, name }}`
-  })
-
   const headers = {
     'Content-Type': 'application/json'
   }
 
   const options = {
-    method: 'POST',
-    headers: headers,
-    body: payload
+    method: 'GET',
+    headers: headers
   }
 
-  return window.fetch(env.metaphysics_url, options)
+  return window.fetch(`/artist-roster/match-artist?q=${value}`, options)
 }
 
 const getSuggestionValue = suggestion => suggestion.name
