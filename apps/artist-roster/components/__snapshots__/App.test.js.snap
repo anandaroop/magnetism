@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App renders 1`] = `
+<div>
+  <h1
+    className="sc-bdVaJa dJdHpx"
+  >
+    Hi Styles
+  </h1>
+  <p>
+    I'm a properly linted App!
+  </p>
+</div>
+`;
