@@ -28,3 +28,52 @@ exports[`App renders 1`] = `
   </ul>
 </div>
 `;
+
+exports[`App responds to clicks 1`] = `
+<div>
+  <styled.h1>
+    Hi Styles
+  </styled.h1>
+  <p>
+    Do you like numbers? Great!
+     
+    <a
+      href="#"
+      onClick={[Function]}
+    >
+      Add more
+    </a>
+  </p>
+  <styled.ul>
+    <styled.li>
+      0
+    </styled.li>
+  </styled.ul>
+</div>
+`;
+
+exports[`App responds to clicks 2`] = `
+<div>
+  <styled.h1>
+    Hi Styles
+  </styled.h1>
+  <p>
+    Do you like numbers? Great!
+     
+    <a
+      href="#"
+      onClick={[Function]}
+    >
+      Add more
+    </a>
+  </p>
+  <styled.ul>
+    <styled.li>
+      0
+    </styled.li>
+    <styled.li>
+      1
+    </styled.li>
+  </styled.ul>
+</div>
+`;
