@@ -10,6 +10,7 @@
     "babel-loader": "^7.1.2",
     "babel-preset-env": "^1.6.0",
     "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
     "babel-register": "^6.26.0",
     "clean-webpack-plugin": "^0.1.16",
     "dotenv": "^4.0.0",
@@ -30,6 +31,9 @@
     "build-storybook": "build-storybook"
   },
   "devDependencies": {
+    "@storybook/addon-actions": "^3.2.6",
+    "@storybook/addon-links": "^3.2.6",
+    "@storybook/react": "^3.2.8",
     "enzyme": "^2.9.1",
     "enzyme-to-json": "^1.5.1",
     "eslint": "^4.6.1",
@@ -43,10 +47,7 @@
     "jest": "^21.0.2",
     "nodemon": "^1.11.0",
     "react-test-renderer": "^15.6.1",
-    "webpack-dev-middleware": "^1.12.0",
-    "@storybook/react": "^3.2.8",
-    "@storybook/addon-actions": "^3.2.6",
-    "@storybook/addon-links": "^3.2.6"
+    "webpack-dev-middleware": "^1.12.0"
   },
   "engines": {
     "node": "8.3.0"
