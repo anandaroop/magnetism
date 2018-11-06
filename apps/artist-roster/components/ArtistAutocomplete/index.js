@@ -21,10 +21,18 @@ const fetchSuggestions = value => {
 
 const getSuggestionValue = suggestion => suggestion.name
 
-const renderSuggestion = suggestion =>
-  <div>
-    {suggestion.name}
-  </div>
+const renderSuggestion = suggestion => {
+  let { birthday, nationality } = suggestion
+  birthday = birthday ? `b. ${birthday}` : null
+  const meta = [nationality, birthday].filter(x => x).join(', ')
+
+  return (
+    <div>
+      {suggestion.name}
+      {meta ? <span style={{ color: '#ccc' }}> {meta}</span> : null}
+    </div>
+  )
+}
 
 class ArtistAutocomplete extends Component {
   constructor() {
@@ -92,7 +100,8 @@ const StyledArtistAutocomplete = styled(ArtistAutocomplete)`
   margin-top: 2em;
   font-family: ${garamond};
 
-  div.react-autosuggest__container {}
+  div.react-autosuggest__container {
+  }
 
   .react-autosuggest__input {
     font-family: ${garamond};
@@ -151,9 +160,10 @@ const mapDispatchToProps = dispatch => {
   }
 }
 
-const ConnectedArtistAutocomplete = connect(mapStateToProps, mapDispatchToProps)(
-  StyledArtistAutocomplete
-)
+const ConnectedArtistAutocomplete = connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(StyledArtistAutocomplete)
 
 // export default StyledArtistAutocomplete
 // export default ConnectedArtistAutocomplete

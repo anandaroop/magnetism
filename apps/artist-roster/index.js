@@ -14,7 +14,9 @@ app.get('/match-artist', (req, res) => {
   const query = `{
     match_artist(term: "${q}", size: 5) {
       id,
-      name
+      name,
+      nationality,
+      birthday
     }
   }`
   metaphysics(query).then(data => res.send(data))
