@@ -57,4 +57,8 @@ const Button = styled.button`
   padding: 1em;
   border: none;
   flex: 0 0 12em;
+  cursor: pointer;
+  &:active {
+    background: black;
+  }
 `
