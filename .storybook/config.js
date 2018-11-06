@@ -5,6 +5,7 @@ function loadStories() {
   require('../apps/artist-roster/components/ArtistAutocomplete/stories.js')
   require('../apps/artist-roster/components/ArtistList/stories.js')
   require('../apps/artist-roster/components/Count/stories.js')
+  require('../apps/artist-roster/components/Slugs/stories.js')
 }
 
 configure(loadStories, module);
