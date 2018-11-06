@@ -60,8 +60,8 @@ const Artist = ({
       </Name>
       <Count name="follows" value={follows} />
       <Count name="artworks" value={artworks} />
-      <Count name="for sale" value={for_sale_artworks} />
-      <Count name="articles" value={articles} />
+      {/* <Count name="for sale" value={for_sale_artworks} /> */}
+      {/* <Count name="articles" value={articles} /> */}
     </Container>
   )
 }
