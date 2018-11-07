@@ -12,24 +12,33 @@ const propTypes = {
 
 const slugString = artistIds => artistIds.join('; ')
 
-const Slugs = ({ artistIds, onClick }) => {
-  if (artistIds.length === 0) return null
-  return (
-    <Wrapper>
-      <List>{slugString(artistIds)}</List>
-      <Button
-        bg="purple"
-        onClick={e => {
-          navigator.clipboard.writeText(slugString(artistIds))
-        }}
-      >
-        Copy to clipboard
-      </Button>
-      <Button bg="gray" p="0.5em" onClick={e => onClick()}>
-        Clear artists
-      </Button>
-    </Wrapper>
-  )
+class Slugs extends React.Component {
+  render() {
+    const { artistIds, onClick } = this.props
+    if (artistIds.length === 0) return null
+
+    return (
+      <Wrapper>
+        <List
+          readOnly
+          value={slugString(artistIds)}
+          innerRef={el => (this._listArea = el)}
+        />
+        <Button
+          bg="purple"
+          onClick={e => {
+            this._listArea.select()
+            document.execCommand('copy')
+          }}
+        >
+          Copy to clipboard
+        </Button>
+        <Button bg="gray" p="0.5em" onClick={e => onClick()}>
+          Clear artists
+        </Button>
+      </Wrapper>
+    )
+  }
 }
 Slugs.propTypes = propTypes
 
@@ -62,7 +71,7 @@ const Wrapper = styled.div`
   height: 100px;
 `
 
-const List = styled.div`
+const List = styled.textarea`
   font-family: monospace;
   border: solid 1px purple;
   padding: 1em;
